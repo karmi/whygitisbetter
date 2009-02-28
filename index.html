@@ -76,8 +76,8 @@
 					<div class="text intro">
 						Tyto stránky vznikly proto, že v poslední době musím stále obhajovat Gitstery
 						vůči obvinění z podléhání módě a slepého sledování toho, co je „cool“.
-						Shromáždil jsem proto několik dobrých důvodů, proč lidé používají Git a nikoliv X,
-						a proč byste to měli taky udělat. Stačí kliknout na některý z důvodů a přečíst si ho.
+						Shromáždil jsem tedy několik dobrých důvodů, proč lidé používají Git a nikoliv „X“,
+						a proč byste to měli taky udělat. Stačí kliknout na některý z důvodů a začíst se do něj.
 					</div>
 					
 					<div class="expand_collapse_links">
@@ -95,44 +95,55 @@
 					</div>
 
 	        <h2>
-          <a name="cheap-local-branching" href="#cheap-local-branching">Cheap Local Branching</a>
+            <a name="cheap-local-branching" href="#cheap-local-branching">
+              Snadná práce s lokálními větvemi <em>(branches)</em>
+            </a>
 	        </h2>
 					<div class="contents">
 						
 						<div class="text">
-							Probably Git's most compelling feature that really makes it stand
-							apart from nearly every other SCM out there is its branching
-							model.  It is completely different from all of the models I'm 
-							comparing it to here, most of which recommend that the best branch
-							is basically a clone of the repository in a new directory.
+							Pravděpodobně nejlákavější vlastností Gitu, která jej skutečně odlišuje
+							od ostatních verzovacích nástrojů (<abbr title="Software Configuration Management">SCM</abbr>),
+							je jeho přístup k „větvím“ <em>(branches)</em> zdrojového kódu.
+							Radikálně se liší od ostatních přístupů, s&nbsp;nimiž jej zde srovnáváme
+							a&nbsp;které zpravidla chápou <em>branch</em> jako klon celého repositáře
+							v&nbsp;novém adresáři.
 						</div>
 						
 						<div class="text">
-							Git does not work like that.  Git will allow you to have multiple
-							local branches that can be entirely independent of each other and
-							the creation, merging and deletion of those lines of development
-							take seconds.
+							Git funguje jinak. Git vám dovoluje mít několik lokálních <em>branchí</em>
+							zdrojového kódu, které na sobě mohou být zcela nezávislé. Vytváření,
+							spojování a mazání těchto „větví“ je otázka sekund.
 						</div>
 						
 						
 						<div class="text">
-							This means that you can do things like:
+							To vám umožňuje provádět zajímavé věci:
 							<ul>
-								<li>Create a branch to try out an idea, commit
-									a few times, switch back to where you branched from, apply a patch, 
-									switch back to where you are experimenting, then merge it in.
+								<li>
+									Zkoušíte si nějaký nápad, pro který vytvoříte zvláštní
+									<em>branch</em>. Můžete do ní průběžně <em>commitovat</em>.
+									Můžete se přepnout zpět do předchozí <em>branche</em>, provést opravu
+									části kódu a&nbsp;<em>commitnout</em> ji. Poté můžete pokračovat
+									v&nbsp;práci na nápadu, a&nbsp;když jste hotovi, <em>mergovat</em>
+									vaši práci do původní <em>branche</em>.
 								</li>
-								<li>Have a branch that always contains only what goes to production,
-									another that you merge work into for testing and several smaller
-									ones for day to day work
+								<li>
+									Můžete mít <em>branch</em>, která vždy obsahuje pouze to, co nasazujete
+									v&nbsp;produkční verzi aplikace. Jinou, kam <em>mergujete</em> věci
+									k&nbsp;otestování a&nbsp;pak několik menších <em>branchí</em>
+									pro každodenní práci.
 								</li>
-								<li>Create new branches for each new feature you're working on, so
-									you can seamlessly switch back and forth between them, then delete
-									each branch when that feature gets merged into your main line.
+								<li>
+									Můžete vytvářet <em>branche</em> pro každé nové zadání, na němž pracujete.
+									Mezi nimi můžete volně přecházet, po dokončení úkolu takovou separátní
+									<em>branch</em> mergovat do hlavní větve a&nbsp;smazat ji.
 								</li>
-								<li>Create a branch to experiment in, realize it's not going to
-									work and just delete it, abandoning the work&mdash;with nobody else
-									ever seeing it (even if you've pushed other branches in the meantime)
+								<li>
+									Můžete si vytvořit <em>branch</em>, ve kterém zkoušíte nějaké řešení,
+									a&nbsp;když zjistíte, že to nebude fungovat, prostě tuto <em>branch</em> smažete,
+									aniž by se kdokoliv dozvěděl, co jste prováděli &mdash; i&nbsp;když jste mezitím
+									<em>pushnuli</em> jiné <em>branche</em>.
 								</li>
 							</ul>
 						</div>
@@ -140,18 +151,18 @@
 						<img src="images/branches.png" alt="branches flowchart"/>
 						
 						<div class="text">
-							Importantly, when you push to a remote repository, you do <em>not</em>
-							have to push all of your branches.  You can only share one of your
-							branches and not all of them.  This tends to free people to try
-							new ideas without worrying about having to plan how and when they
-							are going to merge it in or share it with others.
+							Důležité je, že když <em>pushujete</em> do vzdáleného repositáře,
+							<strong>nemusíte</strong> <em>pushovat</em> všechny <em>branche</em>.
+							Můžete sdílet s&nbsp;ostatními jen některé z&nbsp;nich. To vám umožňuje si
+							zkoušet různé nápady, aniž byste si dělali starosti tím,
+							jak a kdy je budete <em>mergovat</em> nebo sdílet s ostatními.
 						</div>
 						
 						<div class="text">
-							You <em>can</em> find ways to do some of this with other systems, but the work
-							involved is much more difficult and error-prone.  Git makes this
-							process incredibly easy and it changes the way most developers
-							work when they learn it.
+							Samozřejmě, je <em>možné</em> pracovat podobně i&nbsp;v&nbsp;ostatních nástrojích.
+							Ale vyžaduje to daleko více práce a je to náchylnější k chybám. Git tento
+							proces neuvěřitelně usnadňuje a když se jej naučíte, úplně změní způsob
+							vaší práce.
 						</div>
 						
 						<!-- TODO : (short screencast showing the awesomeness of git branches) -->
