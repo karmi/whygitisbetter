@@ -184,40 +184,39 @@
 						<span class="lang perforce">perforce</span>
 					</div>
 	        <h2>
-          <a name="everything-is-local" href="#everything-is-local">Everything is Local</a>
+          <a name="everything-is-local" href="#everything-is-local">Vše je lokální</a>
 	        </h2>
 					<div class="contents">	
 
 						<div class="text">
-							This is basically true of all the distributed SCMs, but in my
-							experience even more so with Git.  There is very little outside
-							of 'fetch', 'pull' and 'push' that communicates in any way with 
-							anything other than your hard disk.
+							To samozřejmě platí pro všechny distribuované verzovací systémy
+							&ndash; pro Git však dvojnásob. Téměř všechny jeho příkazy kromě
+							<code>fetch</code>, <code>pull</code> a&nbsp;<code>push</code>
+							mluví jen s vaším hard-diskem.
 						</div>
 
 						<div class="text">
-							This not only makes most operations much faster than you may
-              be used to, but it also allows you to work on stuff offline.
-              That may not sound like a big deal, but I'm always amazed at
-              how often I actually do work offline.  Being able to branch,
-              merge, commit and browse history of your project while on 
-              the plane or train is very productive.
+              Díky tomu probíhá většina operací daleko rychleji, než jste asi zvyklí,
+              především však můžete pracovat offline. Může se vám zdát, že to není tak
+              důležité, ale pořád mně překvapuje, jak často se mi to stává. Možnost
+              pracovat s větvemi, <em>commitovat</em> a&nbsp;prohlížet si historii
+              projektu v&nbsp;letadle nebo ve vlaku zvyšuje vaši produktivitu.
 						</div>
 						
 						<div class="center"><img style="width: 500px" src="images/local-remote.png" alt="local repo to remote repo flowchart" /></div>
 
 						<div class="text">
-							Even in Mercurial, common commands like 'incoming' and 'outgoing' hit 
-							the server, whereas with Git you can 'fetch' all the servers data
-							before going offline and do comparisons, merges and logs of data
-							that is on the server but not in your local branches yet.
+							I v Mercurialu běžné příkazy jako <code>incoming</code> a <code>outgoing</code>
+							volají na server, zatímco v Gitu můžete provést <code>fetch</code>
+							všech dat ze serveru předtím, než se odpojíte a porovnávat, <em>mergovat</em>
+							a prohlížet si logy pro data, které jsou na serveru, ale ještě ne ve vašich
+							lokálních <em>branchích</em>.
 						</div>
 												
 						<div class="text">
-							This means that it's very easy to have copies of not only your
-							branches, but also of everyone's branches that are working with
-							you in your Git repository without having to mess your own stuff
-							up.
+							To znamená, že máte velmi snadný přístup nejen ke svému kódu,
+							ale i ke kódu kolegů, kteří pracují ve stejném repositáři, aniž byste
+							si museli jejich <em>branchemi</em> zaplevelovat vlastní kód.
 						</div>
 						
 					</div>
