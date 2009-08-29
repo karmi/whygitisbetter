@@ -451,36 +451,40 @@
 					</div>
 		
 	        <h2>
-          <a name="the-staging-area" href="#the-staging-area">The Staging Area</a>
+          <a name="the-staging-area" href="#the-staging-area">Staging Area</a>
 	        </h2>
 					<div class="contents">
 						<div class="text">
-							Unlike the other systems, Git has what it calls the "staging area"
-							or "index".  This is an intermediate area that you can setup what
-							you want your commit to look like before you commit it.
+							Unikátní vlastností Gitu je tzv. <em>&bdquo;staging area&ldquo;</em>
+							neboli &bdquo;index&ldquo;. Jedná se o&nbsp;zvláštní &bdquo;zónu&ldquo;,
+							kde můžete připravit detaily <em>commitu</em> ještě před tím, než
+							jej doopravdy <em>commitujete</em> do repositáře.
 						</div>
 						<div class="text">
-							The cool thing about the staging area, and what sets Git apart 
-							from all these other tools, is that you can easily stage some of
-							your files as you finish them and then commit them without committing
-							all the modified files in your working directory, or having to list
-							them on the command line during the commit
+							Na &bdquo;staging area&ldquo; je výborné, že můžete velmi snadno
+							připravit ke <em>commitu</em> soubory na kterých pracujete podle
+							toho, jak jste s nimi hotovi, a pak je <em>commitovat</em>, aniž byste
+							zároveň <em>commitovali</em> i ostatní rozpracované soubory ve vašem
+							projektu a aniž byste je museli výslovně uvádět při <em>commitu</em>.
+							Tohle Git skutečně odlišuje od ostatních nástrojů a systémů, s nimiž
+							ho zde srovnáváme.
 						</div>
 						<div class="center"><img src="images/index1.png" alt="add commit workflow diagram" /></div>
 						
 						<div class="text">
-						  This also allows you to stage only portions of a modified file.  Gone are
-						  the days of making two logically unrelated modifications to a file before
-						  you realized that you forgot to commit one of them.  Now you can just stage
-						  the change you need for the current commit and stage the other change for
-						  the next commit.  This feature scales up to as many different changes to
-						  your file as you need.
+						  &bdquo;Staging area&ldquo; vám také umožňuje připravit ke <em>commitu</em>
+						  pouze určité části změněného souboru. Pryč jsou tedy časy, kdy jste litovali
+						  toho, že jste v souboru změnili něco, co nesouviselo s dřívější změnou,
+						  aniž byste ji <em>commitovali</em>. V Gitu můžete dřívější změnu připravit ke
+						  <em>commitu</em> zvlášť a zvlášť ji tedy <em>commitovat</em>, a v dalším kroku
+						  můžete <em>commitovat</em> změnu druhou. Takto můžete pracovat i s těmi nejmenšími
+						  změnami v souboru.
 						</div>
 
 						<div class="text">
-							Of course, Git also makes it pretty easy to ignore this feature
-							if you don't want that kind of control&mdash;just slap a '-a' to your
-							commit command in order to add all changes to all files to the staging area.
+							Samozřejmě, pokud budete tuto vlastnost chtít ignorovat, můžete k operaci
+							<em>commit</em> jednoduše přidat <code>-a</code>, a všechny změny ve všech
+							změněných souborech budou přidány do <em>commitu</em>.
 						</div>
 						
 						<div class="center"><img src="images/index2.png" alt="commit only workflow diagram" /></div>
