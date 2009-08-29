@@ -230,34 +230,34 @@
 					</div>
 			
 	        <h2>
-          <a name="git-is-fast" href="#git-is-fast">Git is Fast</a>
+          <a name="git-is-fast" href="#git-is-fast">Git je rychlý</a>
 	        </h2>
 	
 					<div class="contents">
 						<div class="text">
-							Git is fast.  Everyone&mdash;even most of the hard core users of these
-							other systems&mdash;generally give Git this title.  With Git, all
-							operations are performed locally giving it a bit of a leg up on
-							SVN and Perforce, both of which require network access for certain operations.
-							However, even compared to the other DSCMs that also perform operations
-							locally, Git is pretty fast. 
+              Git je rychlý. Přiznávají to i ti nejzarytější příznivci ostatních nástrojů.
+              Všechny operace v Gitu se provádějí lokálně a tak má obrovskou výhodu oproti
+              SVN a Perforce, které vyžadují přístup k síti, aby fungovaly.
+              Ale i ve srovnání s ostatními distribuovanými verzovacími nástroji, které
+              rovněž pracují lokálně, je Git zatraceně rychlý.
 						</div>
 					
 						<div class="text">
-							Part of this is likely because it was built to work on the Linux 
-							kernel, which means that it has had to deal effectively with large
-							repositories from day one.  Additionally, Git is written in C, reducing the
-							overhead of runtimes associated with higher-level languages.
-							Another reason that Git is so fast is that the primary developers
-							have made this a design goal of the application.
+              Jedním z důvodů pravděpodobně bude to, že Git byl vytvořen pro správu
+              Linuxového kernelu, takže se musel efektivně vypořádat s velkými
+              repositáři hned od začátku. Navíc je Git napsán v C, takže má velmi
+              malou režii oproti vyšším programovacím jazykům.
+              A konečně, Git je tak rychlý, protože vývojáři rychlost stanovili
+              jako jeden z jeho cílů.
+              
 						</div>
 
 						<div class="text">
-							The following are a number of benchmarks that I performed on three
-							copies of the Django source code repository in 3 different SCMs:
-							Git, Mercurial and Bazaar.  I also tested some of this stuff in SVN,
-							but trust me, it's slower&mdash;basically take the Bazaar numbers and
-							then add network latency...
+              Níže jsou zobrazeny výsledky měření, která jsem provedl na třech kopiích 
+              zdrojového kódu frameworku Django ve třech různých verzovacích nástrojích:
+              Git, Mercurial a Bazaar. Měření jsem prováděl také v SVN, ale věřte mi, je
+              pomalejší &mdash; víceméně se shoduje s čísly Bazaaru, když přičtete
+              latenci danou připojením k vzdálenému serveru.
 						</div>
 
             <table>  
@@ -284,10 +284,11 @@
 						</table>
 						
 						<div class="text">
-							The end result was that for everything but adding new files, Git
-							was fastest. (Also really large commits, which Hg was basically the
-							same at, but the commit I tested was so large that you're unlikely
-							to ever do anything like it&mdash;normal commits are much faster in Git.)
+							Výsledkem je, že cokoliv kromě přidávání nových souborů je v Gitu rychlejší.
+							(Platí to také pro hodně velké <em>commity</em>, kde byl Mercurial víceméně stejně
+							rychlý, ale <em>commit</em>, na němž jsem testování prováděl byl tak velký,
+							že pravděpodobně takový nikdy dělat nebudete. Běžné <em>commity</em> jsou
+							v Gitu mnohem rychlejší.)
 						</div>
 						
 						<table>
@@ -334,25 +335,25 @@
 								<td>9.055s</td>
 							</tr>
 							<tr>
-								<th>Commit (Large)</th>
+								<th>Commit (velký)</th>
 								<td class="sweet">12.480s</td>
 								<td>12.500s</td>
 								<td>23.002s</td>
 							</tr>
 							<tr>
-								<th>Commit (Small)</th>
+								<th>Commit (malý)</th>
 								<td class="sweet">0.086s</td>
 								<td>0.517s</td>
 								<td>1.139s</td>
 							</tr>
 							<tr>
-								<th>Branch (Cold)</th>
+								<th>Branch (studený start)</th>
 								<td class="sweet">1.161s</td>
 								<td>94.681s</td>
 								<td>82.249s</td>
 							</tr>
 							<tr>
-								<th>Branch (Hot)</th>
+								<th>Branch (teplý start)</th>
 								<td class="sweet">0.070s</td>
 								<td>12.300s</td>
 								<td>39.411s</td>
@@ -360,24 +361,25 @@
 						</table>
 					
 						<div class="text">
-							The cold and hot branching numbers are the numbers for the first
-							and second times that I branched a repo&mdash;the second number being
-							a branch with a hot disk cache.
+							Čísla pro &bdquo;studený&ldquo; a &bdquo;teplý&ldquo; start při vytváření
+							<em>branches</em> znamenají první a opakovanou operaci &mdash; při druhé
+							operaci již tedy byla <em>branch</em> uložena na disku.
 						</div>
 
 						<div class="text">
-							It should be noted that although the 'add' numbers are much slower,
-              this was for a massive add operation&mdash;over 2000 files.  For the
-              majority of what most people do on a daily basis, add ops in any
-              of these systems will only take a fraction of a second. All of the
-              other ops tested here (except for the large commit, possibly) are
-              more indicative of things you might actually do day to day.
+              Měl bych dodat, že ačkoliv čísla pro operaci <code>add</code> jsou
+              u Gitu vysoká, jednalo se o masivní opareci &mdash; přes 2 000 souborů.
+              Pro většinu toho, co každý z nás běžně dělá, zaberou operace
+              <code>add</code> pouhé zlomky sekund. Všechny ostatní uvedené operace
+              (možná kromě onoho obrovského <em>commitu</em>) jsou daleko častější
+              v každodenní práci.
 						</div>
 					
 					
 					<div class="text">
-						These numbers are really not difficult to recreate, simply clone the Django
-						project in each of the systems and try out the same commands in each.
+						Tato měření si může každý provést snadno sám: prostě jen naklonujte
+						zdrojového kódy projektu <a href="http://www.djangoproject.com">Django</a>
+						v různých verzovacích systémech a vyzkoušejte v každém z nich tytéž operace.
 						<ul>
 							<li><code>git clone git://github.com/brosner/django.git dj-git</code></li>
 							<li><code>hg clone http://hg.dpaste.com/django/trunk dj-hg</code></li>
