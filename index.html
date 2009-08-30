@@ -560,60 +560,58 @@
 				</div>
 		
        	<h2>
-        <a name="any-workflow" href="#any-workflow">Any Workflow</a>
+        <a name="any-workflow" href="#any-workflow">Jakékoliv <em>workflow</em></a>
        	</h2>
 
 				<div class="contents">
 					
 					<div class="text">
-						One of the amazing things about Git is that because of its distributed
-						nature and super branching system, you can easily implement pretty
-						much any workflow you can think of relatively easily.
+						Jedna z nejcennějších věcí na Gitu je to, že díky jeho distribuované
+						povaze a perfektní práci s&nbsp;<em>branches</em> můžete snadno
+						používat téměř jakékoliv <em>workflow</em>, které si vymyslíte.
 					</div>
 					
-					<h3>Subversion-Style Workflow</h3>
-					
+					<h3>Workflow typu &bdquo;jako v Subversion&ldquo;</h3>
 
 					<div class="text">
-						A very common Git workflow, especially from people transitioning
-						from a centralized system, is a centralized workflow.  Git will 
-						not allow you to push if someone has pushed since the last time
-						you fetched, so a centralized model where all developers push to
-						the same server works just fine.
+						Velmi obvyklé <em>workflow</em>, speciálně u lidí přecházejících
+						z centralizovaných systémů je právě: centralizované <em>workflow</em>.
+						Git vám neumožní nahrát změny na server, pokud tam mezitím nějaké
+						nahrál někdo jiný, a vy jste si jeho změny nestáhli.
 					</div>
 					
 					<div class="center"><img src="images/workflow-a.png" alt="subversion-style workflow" /></div><br/>
 					
-					<h3>Integration Manager Workflow</h3>
+					<h3>Workflow typu &bdquo;koordinátor&ldquo;</h3>
 
 					<div class="text">
-						Another common Git workflow is where there is an integration 
-						manager&mdash;a single person who commits to the 'blessed' repository,
-						and then a number of developers who clone from that repository, 
-						push to their own independent repositories and ask the integrator
-						to pull in their changes.  This is the type of development model 
-						you often see with open source or GitHub repositories.
+						Jiným běžným <em>workflow</em> je situace, kdy existuje koordinátor &mdash; osoba,
+						která nahrává změny do &bdquo;požehnaného&ldquo; repositáře. Ostatní vývojáři, kteří
+						mají tento repositář naklonovaný, pak nahrávají změny do svých repositářů a&nbsp;
+						žádají koordinátora, aby si jejich změny stáhnul a začlenil do &bdquo;požehnaného&ldquo;
+						repositáře. Tento typ workflow je často k vidění u open source projektů
+						nebo u&nbsp;repositářů spravovaných na Githubu.
 					</div>
 
 					<div class="center"><img src="images/workflow-b.png" alt="integration manager workflow" /></div><br/>
 
-					<h3>Dictator and Lieutenants Workflow</h3>
+					<h3>Workflow typu &bdquo;diktátor a poradci&ldquo;</h3>
 
 					<div class="text">
-						For more massive projects, you can setup your developers similar to
-						the way the Linux kernel is run, where people are in charge of a
-						specific subsystem of the project ('lieutenants') and merge in all
-						changes that have to do with that subsystem.  Then another integrator
-						(the 'dictator') can pull changes from only his/her lieutenants and
-						push those to the 'blessed' repository that everyone then clones from
-						again.
+						Pro rozsáhlé projekty lze využít infrastrukturu podobnou té, jakou
+						využívá Linuxový kernel. Lidé, kteří se starají o určitou část celého
+						systému (&bdquo;poradci&ldquo;) začleňují do svých repositářů změny od ostatních
+						vývojářů, které se týkají právě této části. Hlavní koordinátor
+						(&bdquo;diktátor&ldquo;) si pak od těchto &bdquo;poradců&ldquo; stahuje změny
+						a&nbsp;začleňuje je do &bdquo;požehnaného&ldquo; repositáře.
 					</div>
 
 					<div class="center"><img src="images/workflow-c.png" alt="dictator and lieutenants workflow" /></div><br/>
 					
 					<div class="text">
-						Again, Git is entirely flexible about this, so you can mix and 
-						match and choose the workflow that is right for you. 
+						Git je ale co se <em>workflow</em> týče velmi flexibilní,
+						takže si můžete vytvořit nebo adaptovat <em>workflow</em>
+						zcela podle svých představ a potřeb.
           </div>
 					
 				</div>
