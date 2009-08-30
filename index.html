@@ -498,27 +498,30 @@
 					</div>
 
 	        <h2>
-          <a name="distributed" href="#distributed">Distributed</a>
+          <a name="distributed" href="#distributed">Distribuovaný verzovací systém</a>
 	        </h2>
 
 					<div class="contents">
 
 					  <div class="text">
-              One of the coolest features of any of the Distributed SCMs, Git included, is that it's
-              distributed.  This means that instead of doing a "checkout" of the current tip of 
-              the source code, you do a "clone" of the entire repository.
+              Jedna z nejúžasnějších vlastností všech distribuovaných systémů na správu verzí
+              včetně Gitu je to, že jsou &hellip; distribuované. Místo toho, abyste provedli
+              <em>&bdquo;checkout&ldquo;</em> poslední verze obsahu, získáte &bdquo;klon&ldquo;
+              celého repositáře.
             </div>
             <div class="text">
-              This means that even 
-              if you're using a centralized workflow, every user has what is essentially a full
-              backup of the main server, each of which could be pushed up to replace the main server
-              in the event of a crash or corruption.  There is basically no single point of failure
-              with Git unless there is only a single point.
+              To znamená, že i když používáte centralizované <em>workflow</em>, každý uživatel
+              má kopii, kompletní zálohu celého serveru. Každá z těchto kopií může nahradit
+              kopii &bdquo;hlavní&ldquo;, resp. &bdquo;centrální&ldquo;, pokud by došlo ke ztrátě nebo
+              poškození dat. Při práci v Gitu tedy neexistuje ono známé &bdquo;jedno zranitelné místo&ldquo;
+              (angl. <em>single point of failure)</em> &mdash; tedy pokud neukládáte data doslova jen
+              na jediné &bdquo;místo&ldquo;.
             </div>
 
             <div class="text">
-              This does not slow things down much, either.  On average, an SVN checkout is only marginally
-              faster than any of the DSCMs. Of the DSCMs I tested, Git was the fastest.
+              Mohli byste si myslet, že to musí práci zpomalovat, není to ale pravda. Obvykle jsou
+              distribuované systémy na správu verzí jen o málo pomalejší než Subversion.
+              A&nbsp;z distribuovaných systémů, které jsem testoval, byl Git nejrychlejší.
 					  </div>
 
 						<table>
