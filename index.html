@@ -75,7 +75,7 @@
 	    <div class="span-24">
 					<div class="text intro">
 						Tyto stránky vznikly proto, že v poslední době musím stále obhajovat Gitstery
-						vůči obvinění z podléhání módě a slepého sledování toho, co je &bdquo;cool&ldquo;.
+						vůči obvinění z&nbsp;podléhání módě a&nbsp;slepého sledování toho, co je &bdquo;cool&ldquo;.
 						Shromáždil jsem tedy několik dobrých důvodů, proč lidé používají Git a nikoliv &bdquo;X&ldquo;,
 						a proč byste to měli taky udělat. Stačí kliknout na některý z důvodů a začíst se do něj.
 					</div>
@@ -111,9 +111,10 @@
 						</div>
 						
 						<div class="text">
-							Git funguje jinak. Git vám dovoluje mít několik lokálních <em>branchí</em>
+							Git funguje jinak. Git vám dovoluje mít několik lokálních <em>branches</em>
 							zdrojového kódu, které na sobě mohou být zcela nezávislé. Vytváření,
-							spojování a mazání těchto &bdquo;větví&ldquo; je otázka sekund.
+							spojování a mazání těchto &bdquo;větví&ldquo;, resp. &bdquo;verzí&ldquo;
+							obsahu je otázka sekund.
 						</div>
 						
 						
@@ -135,9 +136,9 @@
 									pro každodenní práci.
 								</li>
 								<li>
-									Můžete vytvářet <em>branche</em> pro každé nové zadání, na němž pracujete.
-									Mezi nimi můžete volně přecházet, po dokončení úkolu takovou separátní
-									<em>branch</em> mergovat do hlavní větve a&nbsp;smazat ji.
+									Můžete vytvářet <em>branch</em> pro každý nový úkol, na němž pracujete.
+									Mezi takovými <em>branchemi</em> můžete volně přecházet, po dokončení úkolu
+									separátní <em>branch</em> mergovat do hlavní větve a&nbsp;smazat ji.
 								</li>
 								<li>
 									Můžete si vytvořit <em>branch</em>, ve kterém zkoušíte nějaké řešení,
@@ -192,13 +193,13 @@
 							To samozřejmě platí pro všechny distribuované verzovací systémy
 							&ndash; pro Git však dvojnásob. Téměř všechny jeho příkazy kromě
 							<code>fetch</code>, <code>pull</code> a&nbsp;<code>push</code>
-							mluví jen s vaším hard-diskem.
+							si povídají jen s vaším diskem.
 						</div>
 
 						<div class="text">
               Díky tomu probíhá většina operací daleko rychleji, než jste asi zvyklí,
               především však můžete pracovat offline. Může se vám zdát, že to není tak
-              důležité, ale pořád mně překvapuje, jak často se mi to stává. Možnost
+              důležité, ale pořád mně překvapuje, jak často je to potřeba. Možnost
               pracovat s větvemi, <em>commitovat</em> a&nbsp;prohlížet si historii
               projektu v&nbsp;letadle nebo ve vlaku zvyšuje vaši produktivitu.
 						</div>
@@ -206,7 +207,7 @@
 						<div class="center"><img style="width: 500px" src="images/local-remote.png" alt="local repo to remote repo flowchart" /></div>
 
 						<div class="text">
-							I v Mercurialu běžné příkazy jako <code>incoming</code> a <code>outgoing</code>
+							Dokonce i v Mercurialu běžné příkazy jako <code>incoming</code> a <code>outgoing</code>
 							volají na server, zatímco v Gitu můžete provést <code>fetch</code>
 							všech dat ze serveru předtím, než se odpojíte a porovnávat, <em>mergovat</em>
 							a prohlížet si logy pro data, které jsou na serveru, ale ještě ne ve vašich
@@ -237,16 +238,16 @@
 						<div class="text">
               Git je rychlý. Přiznávají to i ti nejzarytější příznivci ostatních nástrojů.
               Všechny operace v Gitu se provádějí lokálně a tak má obrovskou výhodu oproti
-              SVN a Perforce, které vyžadují přístup k síti, aby fungovaly.
+              SVN a Perforce, které vyžadují přístup k síti, aby vůbec fungovaly.
               Ale i ve srovnání s ostatními distribuovanými verzovacími nástroji, které
-              rovněž pracují lokálně, je Git zatraceně rychlý.
+              také pracují lokálně, je Git zatraceně rychlý.
 						</div>
 					
 						<div class="text">
               Jedním z důvodů pravděpodobně bude to, že Git byl vytvořen pro správu
               Linuxového kernelu, takže se musel efektivně vypořádat s velkými
               repositáři hned od začátku. Navíc je Git napsán v C, takže má velmi
-              malou režii oproti vyšším programovacím jazykům.
+              malou režii oproti programovacím jazykům vyšší úrovně.
               A konečně, Git je tak rychlý, protože vývojáři rychlost stanovili
               jako jeden z jeho cílů.
               
@@ -286,7 +287,7 @@
 						<div class="text">
 							Výsledkem je, že cokoliv kromě přidávání nových souborů je v Gitu rychlejší.
 							(Platí to také pro hodně velké <em>commity</em>, kde byl Mercurial víceméně stejně
-							rychlý, ale <em>commit</em>, na němž jsem testování prováděl byl tak velký,
+							rychlý. <em>Commit</em>, na němž jsem testování prováděl, byl ale tak velký,
 							že pravděpodobně takový nikdy dělat nebudete. Běžné <em>commity</em> jsou
 							v Gitu mnohem rychlejší.)
 						</div>
@@ -371,8 +372,8 @@
               u Gitu vysoká, jednalo se o masivní opareci &mdash; přes 2 000 souborů.
               Pro většinu toho, co každý z nás běžně dělá, zaberou operace
               <code>add</code> pouhé zlomky sekund. Všechny ostatní uvedené operace
-              (možná kromě onoho obrovského <em>commitu</em>) jsou daleko častější
-              v každodenní práci.
+              (možná kromě onoho obrovského <em>commitu</em>) jsou při každodenní práci
+              daleko častější.
 						</div>
 					
 					
@@ -476,13 +477,13 @@
 						  pouze určité části změněného souboru. Pryč jsou tedy časy, kdy jste litovali
 						  toho, že jste v souboru změnili něco, co nesouviselo s dřívější změnou,
 						  aniž byste ji <em>commitovali</em>. V Gitu můžete dřívější změnu připravit ke
-						  <em>commitu</em> zvlášť a zvlášť ji tedy <em>commitovat</em>, a v dalším kroku
+						  <em>commitu</em> zvlášť a zvlášť ji tedy <em>commitovat</em>. A v dalším kroku
 						  můžete <em>commitovat</em> změnu druhou. Takto můžete pracovat i s těmi nejmenšími
 						  změnami v souboru.
 						</div>
 
 						<div class="text">
-							Samozřejmě, pokud budete tuto vlastnost chtít ignorovat, můžete k operaci
+							Samozřejmě, pokud budete tuto vlastnost chtít ignorovat, můžete k příkazu
 							<em>commit</em> jednoduše přidat <code>-a</code>, a všechny změny ve všech
 							změněných souborech budou přidány do <em>commitu</em>.
 						</div>
@@ -504,7 +505,7 @@
 					<div class="contents">
 
 					  <div class="text">
-              Jedna z nejúžasnějších vlastností všech distribuovaných systémů na správu verzí
+              Jedna z nejlepších vlastností všech distribuovaných systémů na správu verzí
               včetně Gitu je to, že jsou &hellip; distribuované. Místo toho, abyste provedli
               <em>&bdquo;checkout&ldquo;</em> poslední verze obsahu, získáte &bdquo;klon&ldquo;
               celého repositáře.
@@ -567,7 +568,7 @@
 					
 					<div class="text">
 						Jedna z nejcennějších věcí na Gitu je to, že díky jeho distribuované
-						povaze a perfektní práci s&nbsp;<em>branches</em> můžete snadno
+						povaze a perfektní práci s&nbsp;<em>branchemi</em> můžete snadno
 						používat téměř jakékoliv <em>workflow</em>, které si vymyslíte.
 					</div>
 					
@@ -587,8 +588,8 @@
 					<div class="text">
 						Jiným běžným <em>workflow</em> je situace, kdy existuje koordinátor &mdash; osoba,
 						která nahrává změny do &bdquo;požehnaného&ldquo; repositáře. Ostatní vývojáři, kteří
-						mají tento repositář naklonovaný, pak nahrávají změny do svých repositářů a&nbsp;
-						žádají koordinátora, aby si jejich změny stáhnul a začlenil do &bdquo;požehnaného&ldquo;
+						mají tento repositář naklonovaný, pak nahrávají změny do svých repositářů dostupných přes síť
+						a&nbsp;žádají koordinátora, aby si jejich změny stáhnul a začlenil do &bdquo;požehnaného&ldquo;
 						repositáře. Tento typ workflow je často k vidění u open source projektů
 						nebo u&nbsp;repositářů spravovaných na Githubu.
 					</div>
@@ -598,7 +599,7 @@
 					<h3>Workflow typu &bdquo;diktátor a poradci&ldquo;</h3>
 
 					<div class="text">
-						Pro rozsáhlé projekty lze využít infrastrukturu podobnou té, jakou
+						Pro opravdu rozsáhlé projekty lze využít infrastrukturu podobnou té, jakou
 						využívá Linuxový kernel. Lidé, kteří se starají o určitou část celého
 						systému (&bdquo;poradci&ldquo;) začleňují do svých repositářů změny od ostatních
 						vývojářů, které se týkají právě této části. Hlavní koordinátor
@@ -646,7 +647,7 @@
 						projekty a programátory, kteří se zabývají něčím podobným jako vy,
 						můžete si snadno vytvořit <em>fork</em> jiného repositáře a podílet
 						se na společné práci. To vytváří kolem Gitu a projektů, které jej
-						využívají živou komunitu.
+						využívají, velmi živou komunitu.
 					</div>
 					
 					<div class="text">					
@@ -654,8 +655,7 @@
 						systémy na správu verzí, ale málo z nich je tak silně orientovaných
 						na samotné uživatele a sociální aspekty, a žádná z nich nemá takový
 						počet uživatelů.
-						Používání Gitu a GitHubu je proto pro rychle se vyvíjející
-						open source projekty silná kombinace.
+						Git a GitHub jsou tedy ideální pro rychle se vyvíjející open source projekty.
 					</div>
 
 					<div class="text">					
@@ -691,7 +691,7 @@
 						kolekcí různých nástrojů, které umožňovaly pracovat s verzovaným souborovým
 						systémem distribuovaným způsobem než skutečným systémem na správu verzí.
 						Dnes jsou ale příkazy Gitu a jejich pochopitelnost podobné jako u ostatních
-						nástrojů, a oproti některým nástrojům je na tom Git i lépe.
+						nástrojů, a oproti některým nástrojům je na tom Git i&nbsp;lépe.
 					</div>
 
 					<div class="text">										
@@ -757,8 +757,8 @@ show       Show various types of objects
 				<div class="text">										
 					Všechny příkazy Gitu bývaly &mdash; před verzí 1.6 &mdash; v cestě k programům
 					(<code>PATH</code>), a to spoustu lidí mátlo. Ačkoliv všechny tyto příkazy
-					můžete stále používat, v cestě je nyní jediný příkaz: <code>git</code>.
-					Takže např. Mercurial a Git mají nyní téměř totožnou nabídku příkazů
+					můžete stále používat, v cestě je nyní jediný příkaz: <code>git</code>,
+					takže např. Mercurial a Git mají nyní téměř totožnou nabídku příkazů
 					a nápovědu. Z pohledu záčatečníka je jejich rozhraní skoro stejné.
 				</div>
 				
